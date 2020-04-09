@@ -20,15 +20,15 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 - [x] Upload a photo for bootcamp
 - [x] Update bootcamps
 - [x] Delete Bootcamp
-- [x] Calculate the average cost of all courses for a bootcamp
-- [x] Calculate the average rating from the reviews for a bootcamp
+- [ ] Calculate the average cost of all courses for a bootcamp
+- [ ] Calculate the average rating from the reviews for a bootcamp
 
 ### Courses
-- [ ] List all courses for bootcamp
-- [ ] List all courses in general
-- [ ] Get single course in Bootcamp
-- [ ] Create new course in Bootcamp
-- [ ] Delete course in Bootcamp
+- [x] List all courses for bootcamp
+- [x] List all courses in general
+- [x] Get single course in Bootcamp
+- [x] Create new course in Bootcamp
+- [x] Delete course in Bootcamp
 
 ### Reviews
 - [ ] List all reviews for a bootcamp

@@ -81,6 +81,7 @@ exports.getBootcamps = asyncHandler (async (req, res, next) => {
     
     //Executing query
     const bootcamps = await query;
+    
 
     res.status(200).json({success: true, count: bootcamps.length, pagination, data:bootcamps});
 
@@ -91,13 +92,13 @@ exports.getBootcamps = asyncHandler (async (req, res, next) => {
 //@desc    Get single bootcamps
 //@route   GET /api/v1/bootcamps/:id
 //@access  Public
-exports.getBootcamp = asyncHandler( async (req, res, next) => {
-     
-    const bootcamp = await Bootcamp.findById(req.params.id);
+exports.getBootcamp = asyncHandler( async (req, res, next) => {    
+    const bootcamp = await Bootcamp.findById(req.params.id).populate('courses');
     if(!bootcamp){
         return next(new ErrorResponse(`Resource not found with id of ${req.params.id}`, 404));
 
     }
+    
 
     res.status(200).json({success: true, data: bootcamp})
 
@@ -142,6 +143,8 @@ exports.updateBootcamp = asyncHandler( async (req, res, next) => {
 //@route    DELETE /api/v1/bootcamps/:id
 //@access   Private
 exports.deleteBootcamp = asyncHandler( async(req, res, next) => {
+
+    
     
     const bootcamp = await Bootcamp.findById(req.params.id);
     
@@ -181,3 +184,6 @@ exports.getBootcampsInRadius = asyncHandler( async(req, res, next) => {
         data: bootcamps
     })
 });
+
+
+
