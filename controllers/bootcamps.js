@@ -9,6 +9,7 @@ const path = require('path');
 //@route   GET /api/v1/bootcamps
 //@access  Public
 exports.getBootcamps = asyncHandler (async (req, res, next) => {
+    /*
     let query;
 
     //Copy req.query
@@ -83,10 +84,11 @@ exports.getBootcamps = asyncHandler (async (req, res, next) => {
     //Executing query
     const bootcamps = await query;
     
+*/
+   // res.status(200).json({success: true, count: bootcamps.length, pagination, data:bootcamps});
 
-    res.status(200).json({success: true, count: bootcamps.length, pagination, data:bootcamps});
+     res.status(200).json(res.advancedResults);
 
-   
    
 });
 
