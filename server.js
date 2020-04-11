@@ -17,6 +17,8 @@ dotenv.config({path: './config/config.env'});
 //Route files
 const bootcapms = require('./routes/bootcamps.js');
 const courses = require('./routes/courses.js');
+const auth = require('./routes/auth.js');
+
 
 
 
@@ -44,6 +46,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Mount routes
 app.use('/api/v1/bootcamps' , bootcapms);
 app.use('/api/v1/courses' , courses);
+app.use('/api/v1/auth',auth);
+
 
 
 
