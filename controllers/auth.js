@@ -16,11 +16,8 @@ exports.register = asyncHandler(async (req, res, next) => {
         role
     });
 
-    //Create token
-    const token = user.getSignedJwtToken();
-
-    res.status(200).json({success: true, token});
-})
+    sendTokenRosponse(user, 200, res);
+});
 
 //@desc    Login user
 //@route   POST /api/v1/auth/login
@@ -47,8 +44,39 @@ exports.login = asyncHandler(async (req, res, next) => {
         return next(new ErrorResponse('Invalid credentials', 401));
     }
 
-    //Create token
+    sendTokenRosponse(user, 200, res);
+});
+
+//Get token from model, create cookie and send response
+const sendTokenRosponse = (user, statusCode, res) => {
     const token = user.getSignedJwtToken();
 
-    res.status(200).json({success: true, token});
+    const options = {
+        expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+        httpOnly: true
+    };
+
+    if(process.env.NODE_ENV === 'production'){
+        options.secure = true;
+    }
+
+    res
+        .status(statusCode)
+        .cookie('token', token, options)
+        .json({
+            success: true,
+            token
+        });
+}
+
+//@desc    Get current looged in user
+//@route   POST /api/v1/auth/me
+//@access  Prive
+exports.getMe = asyncHandler(async(req, res, next) =>{
+    const user = await User.findById(req.user.id);
+
+    res.status(200).json({
+        success: true,
+        data: user
+    })
 })

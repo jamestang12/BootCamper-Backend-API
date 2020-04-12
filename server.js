@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 const errorHandler = require('./middleware/error');
 const fileupload = require('express-fileupload');
 const path = require('path');
+const cookieParaer = require('cookie-parser');
 
 
 const app = express();
@@ -29,6 +30,9 @@ connectDB();
 
 //Body parser
 app.use(express.json());
+
+//Cookie parser
+app.use(cookieParaer());
 
 
 
