@@ -39,14 +39,14 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 - [ ] Delete review
 
 ### Users & Authentication
-- [ ] Authentication will be ton using JWT/cookies
-- [ ] User registration
-- [ ] User login
-- [ ] Get user
+- [x] Authentication will be ton using JWT/cookies
+- [x] User registration
+- [x] User login
+- [x] Get user
 - [ ] Password reset (lost password)
 - [ ] Update user info
 - [ ] User CRUD
-- [ ] Users can only be made admin by updating the database field manually
+- [x] Users can only be made admin by updating the database field manually
 
 ### Security
 - [ ] Encrypt passwords and reset tokens
