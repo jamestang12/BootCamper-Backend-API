@@ -11,6 +11,8 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 * Postman
 * Geocoder 
 * Mapquest
+* Nodemailer
+* Mailtrap
 
 ## Functionality
 
@@ -43,9 +45,9 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 - [x] User registration
 - [x] User login
 - [x] Get user
-- [ ] Password reset (lost password)
-- [ ] Update user info
-- [ ] User CRUD
+- [x] Password reset (lost password)
+- [x] Update user info
+- [x] User CRUD
 - [x] Users can only be made admin by updating the database field manually
 
 ### Security
