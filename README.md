@@ -23,7 +23,7 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 - [x] Update bootcamps
 - [x] Delete Bootcamp
 - [x] Calculate the average cost of all courses for a bootcamp
-- [ ] Calculate the average rating from the reviews for a bootcamp
+- [x] Calculate the average rating from the reviews for a bootcamp
 
 ### Courses
 - [x] List all courses for bootcamp
@@ -33,12 +33,12 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 - [x] Delete course in Bootcamp
 
 ### Reviews
-- [ ] List all reviews for a bootcamp
-- [ ] List all reviews in general
-- [ ] Get a single review
-- [ ] Create a review
-- [ ] Update review
-- [ ] Delete review
+- [x] List all reviews for a bootcamp
+- [x] List all reviews in general
+- [x] Get a single review
+- [x] Create a review
+- [x] Update review
+- [x] Delete review
 
 ### Users & Authentication
 - [x] Authentication will be ton using JWT/cookies
