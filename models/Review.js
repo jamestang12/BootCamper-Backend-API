@@ -33,6 +33,9 @@ const ReviewSchema = new mongoose.Schema({
     }
 });
 
+//Prevent user from submitting more that one review pre bootcamp
+ReviewSchema.index({bootcamp: 1, user: 1}, {unique: true});
+
 
 
     
