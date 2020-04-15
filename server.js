@@ -7,6 +7,7 @@ const errorHandler = require('./middleware/error');
 const fileupload = require('express-fileupload');
 const path = require('path');
 const cookieParaer = require('cookie-parser');
+const mongoSanitize = require('express-mongo-sanitize');
 
 
 const app = express();
@@ -45,6 +46,9 @@ app.use(cookieParaer());
 
 //File uploading
 app.use(fileupload());
+
+//Sanitize data
+app.use(mongoSanitize);
 
 //Set Static folder
 app.use(express.static(path.join(__dirname, 'public')));
