@@ -20,6 +20,7 @@ const bootcapms = require('./routes/bootcamps.js');
 const courses = require('./routes/courses.js');
 const auth = require('./routes/auth.js');
 const user = require('./routes/users');
+const review = require('./routes/reviews');
 
 
 
@@ -53,6 +54,7 @@ app.use('/api/v1/bootcamps' , bootcapms);
 app.use('/api/v1/courses' , courses);
 app.use('/api/v1/auth',auth);
 app.use('/api/v1/users',user);
+app.use('/api/v1/reviews', review);
 
 
 

@@ -2,7 +2,7 @@ const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const Course = require('../models/Course');
 const Bootcamp = require('../models/Bootcamp');
-
+const express = require('express');
 
 
 
@@ -17,6 +17,7 @@ exports.getCourses = asyncHandler(async(req, res, next) => {
         return res.status(200).json({success: true, count: course.length, data: courses});
     }else{
         res.status(200).json(res.advancedResults);
+        
     }
 
     
