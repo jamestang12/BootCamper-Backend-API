@@ -13,6 +13,9 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 * Mapquest
 * Nodemailer
 * Mailtrap
+* Digital Ocean
+* PM2
+* [Link to API](http://jamesyang12.com/)
 
 ## Functionality
 
@@ -51,11 +54,11 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 - [x] Users can only be made admin by updating the database field manually
 
 ### Security
-- [ ] Encrypt passwords and reset tokens
-- [ ] Prevent cross site scripting - XSS
-- [ ] Prevent NoSQL injections
-- [ ] Add a rate limit for requests of 100 requests per 10 minutes
-- [ ] Protect against http param polution
-- [ ] Add headers for security (helmet)
-- [ ] Use cors to make API public (for now)
+- [x] Encrypt passwords and reset tokens
+- [x] Prevent cross site scripting - XSS
+- [x] Prevent NoSQL injections
+- [x] Add a rate limit for requests of 100 requests per 10 minutes
+- [x] Protect against http param polution
+- [x] Add headers for security (helmet)
+- [x] Use cors to make API public (for now)
 
