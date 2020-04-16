@@ -1,4 +1,4 @@
-# BootCamper-Backend-API (In Progress)
+# BootCamper-Backend-API
 Back-end bootcamp API for directory website, allow user to list all bootcamps in the database, search bootcamp and more
 
 ## Tools
