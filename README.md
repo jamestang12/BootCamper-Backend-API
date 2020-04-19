@@ -1,5 +1,6 @@
 # BootCamper-Backend-API
 Back-end bootcamp API for directory website, allow user to list all bootcamps in the database, search bootcamp and more
+* [Link to API](https://jamesyang12.com/)
 
 ## Tools
 
@@ -15,7 +16,7 @@ Back-end bootcamp API for directory website, allow user to list all bootcamps in
 * Mailtrap
 * Digital Ocean
 * PM2
-* [Link to API](http://jamesyang12.com/)
+
 
 ## Functionality
 
